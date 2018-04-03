@@ -37,11 +37,6 @@ captures/
 gen-external-apklibs
 
 #Python bkp file
-<<<<<<< HEAD
-.py~
-.py.un~
-=======
->>>>>>> 02f2a0ad247421ccd07db91fa9273607dbcd43ba
 *.py~
 *.py.un~
 
