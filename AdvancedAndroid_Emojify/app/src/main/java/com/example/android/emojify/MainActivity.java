@@ -30,6 +30,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.content.FileProvider;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -45,7 +46,7 @@ import butterknife.OnClick;
 import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity {
-
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     private static final int REQUEST_IMAGE_CAPTURE = 1;
     private static final int REQUEST_STORAGE_PERMISSION = 1;
@@ -180,13 +181,14 @@ public class MainActivity extends AppCompatActivity {
         mSaveFab.setVisibility(View.VISIBLE);
         mShareFab.setVisibility(View.VISIBLE);
         mClearFab.setVisibility(View.VISIBLE);
-
+        Log.d(TAG, "mTempPhotoPath: " + mTempPhotoPath);
         // Resample the saved image to fit the ImageView
         mResultsBitmap = BitmapUtils.resamplePic(this, mTempPhotoPath);
-
+        Log.d(TAG, "mResultsBitmap 1: " + mResultsBitmap);
 
         // Detect the faces and overlay the appropriate emoji
-        mResultsBitmap = Emojifier.detectFacesandOverlayEmoji(this, mResultsBitmap);
+        mResultsBitmap = Emojifier.detectFaces(this, mResultsBitmap);
+        Log.d(TAG, "mResultsBitmap 2: " + mResultsBitmap);
 
         // Set the new bitmap to the ImageView
         mImageView.setImageBitmap(mResultsBitmap);
