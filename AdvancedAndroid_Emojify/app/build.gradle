@@ -26,7 +26,8 @@ dependencies {
     })
     implementation 'com.android.support:design:26.1.0'
     implementation 'com.android.support:appcompat-v7:26.1.0'
-    implementation 'com.google.android.gms:play-services-vision:10.2.0'
+    implementation 'com.google.android.gms:play-services-vision:12.0.0'
+//    implementation 'com.google.android.gms:play-services:12.0.1'
     implementation 'com.jakewharton:butterknife:8.5.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
     implementation 'com.jakewharton.timber:timber:4.7.0'

@@ -40,7 +40,7 @@ class Emojifier {
 
     static Bitmap detectFaces(Context context, Bitmap picture) {
 // Create the face detector, disable tracking and enable classifications
-        FaceDetector detector = new FaceDetector.Builder(context)
+            FaceDetector detector = new FaceDetector.Builder(context)
                 .setTrackingEnabled(false)
                 .setClassificationType(FaceDetector.ALL_CLASSIFICATIONS)
                 .build();
