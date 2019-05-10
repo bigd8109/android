@@ -3,6 +3,7 @@ package com.bigd8109.downloadapp;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
+import android.util.Log;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +12,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class DownloadTask extends AsyncTask<String, Integer, Bitmap> {
+    private final static String TAG = DownloadTask.class.getSimpleName();
     String url;
     Bitmap bitmap;
     InputStream in = null;
@@ -19,11 +21,14 @@ public class DownloadTask extends AsyncTask<String, Integer, Bitmap> {
 
     @Override
     protected void onProgressUpdate(Integer... values) {
+        Log.d(TAG, "downloading..." + values);
         super.onProgressUpdate(values);
+
     }
 
     @Override
     protected void onPostExecute(Bitmap bitmap) {
+        Log.d(TAG, "onPostExecute");
         super.onPostExecute(bitmap);
         callback.getBitmap(bitmap);
     }
