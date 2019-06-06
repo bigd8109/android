@@ -42,6 +42,7 @@ class UserAdapter(val  userList: ArrayList<User>, val context: Context): Recycle
         }
         override fun onClick(itemView: View?) {
             Log.d("xxx", "Click ${itemView} at pos: ${adapterPosition}")
+//            itemView.toast("xxx", "Click ${itemView} at pos: ${adapterPosition}")
         }
 
         val textView = view.user_view_row

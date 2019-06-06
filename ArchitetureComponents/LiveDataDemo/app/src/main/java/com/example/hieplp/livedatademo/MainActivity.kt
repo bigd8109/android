@@ -3,16 +3,12 @@ package com.example.hieplp.livedatademo
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import com.example.hieplp.livedatademo.databinding.ActivityMainBinding
 import kotlinx.android.synthetic.main.activity_main.*
-import android.databinding.adapters.ViewBindingAdapter.setClickListener
-import android.support.constraint.ConstraintLayout
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
 
         var data = ArrayList<User>()
-        data.add(User("test123"))
+        data.add(User("test1"))
         data.add(User("test2"))
         data.add(User("test3"))
 

@@ -13,7 +13,7 @@
             android:id="@+id/input_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="input"
+            android:text="Type some text here"
         />
         
         <Button
